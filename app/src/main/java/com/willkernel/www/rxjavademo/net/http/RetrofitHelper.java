@@ -40,6 +40,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class RetrofitHelper {
 
   private static final String TAG = "RetrofitHelper";
+  private static final String BaseUrl = "http://.com/";
   private static RetrofitHelper retrofitHelper;
   private LoginApi loginApi;
   private UserApi userApi;
@@ -49,8 +50,8 @@ public final class RetrofitHelper {
   public RetrofitHelper() {
     initOkHttp();
     compositeDisposable = new CompositeDisposable();
-    loginApi = getApiService("http://a.ypt5566.com/", LoginApi.class);
-    userApi = getApiService("http://a.ypt5566.com/", UserApi.class);
+    loginApi = getApiService(BaseUrl, LoginApi.class);
+    userApi = getApiService(BaseUrl, UserApi.class);
   }
 
   private void initOkHttp() {
