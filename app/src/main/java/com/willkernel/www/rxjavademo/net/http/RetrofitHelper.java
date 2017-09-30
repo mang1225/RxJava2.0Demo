@@ -40,7 +40,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class RetrofitHelper {
 
   private static final String TAG = "RetrofitHelper";
-  private static final String BaseUrl = "http://.com/";
+  private static final String BaseUrl = "http://www.baidu.com/";
   private static RetrofitHelper retrofitHelper;
   private LoginApi loginApi;
   private UserApi userApi;
