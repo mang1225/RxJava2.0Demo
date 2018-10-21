@@ -1,7 +1,7 @@
 package com.willkernel.www.rxjavademo.net.http;
 
 import android.content.Context;
-import android.support.compat.BuildConfig;
+import com.willkernel.www.rxjavademo.BuildConfig;
 import android.util.Log;
 import android.widget.Toast;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -33,8 +33,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by willkernel on 2017/6/27.
- * mail:willkerneljc@gmail.com
+ * Created by willkernel on 2017/6/27. mail:willkerneljc@gmail.com
  */
 
 public final class RetrofitHelper {
@@ -60,7 +59,7 @@ public final class RetrofitHelper {
     builder.connectTimeout(10, TimeUnit.SECONDS);
     builder.writeTimeout(10, TimeUnit.SECONDS);
     builder.retryOnConnectionFailure(true);
-    if (BuildConfig.DEBUG) {
+    if (BuildConfig.LOG_DEBUG) {
       HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
       interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
       builder.addInterceptor(interceptor);
